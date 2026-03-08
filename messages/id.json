@@ -16,12 +16,12 @@
     "whatsapp": "WhatsApp"
   },
   "hero": {
-    "badge": "Rumah Kayu Premium di Tabanan",
+    "badge": "Rumah Kayu Premium di Bali",
     "title": "Bangun Hunian Kayu Elegan dengan Karakter Tradisional yang Berkelas",
     "description": "Rumah Kayu SC menghadirkan rumah kayu <strong>Joglo</strong>, <strong>Limasan</strong>, dan <strong>Gladak</strong> dengan tampilan bersih, elegan, dan penuh kehangatan alami. Cocok untuk hunian pribadi, villa, ruang santai, hingga bangunan komersial yang ingin tampil lebih bernilai dan berkarakter.",
     "cta": "Konsultasi via WhatsApp",
     "viewProducts": "Lihat Produk",
-    "location": "Tabanan",
+    "location": "Bali",
     "design": "Desain elegan & natural",
     "types": "Joglo, Limasan, Gladak",
     "cardTitle": "Rumah Kayu SC",
@@ -31,7 +31,7 @@
     "badge": "Tentang Kami",
     "tagline": "Keindahan rumah kayu yang dibuat dengan rasa, detail, dan karakter.",
     "title": "Rumah Kayu yang Indah Dipandang, Nyaman Digunakan",
-    "description1": "Berlokasi di <strong>Tabanan</strong>, Rumah Kayu SC fokus menghadirkan bangunan kayu yang tidak hanya menarik secara visual, tetapi juga nyaman, bernilai estetika tinggi, dan memberi kesan eksklusif pada setiap ruang.",
+    "description1": "Berbasis di <strong>Bali</strong>, Rumah Kayu SC fokus menghadirkan bangunan kayu yang tidak hanya menarik secara visual, tetapi juga nyaman, bernilai estetika tinggi, dan memberi kesan eksklusif pada setiap ruang.",
     "description2": "Kami memadukan karakter arsitektur tradisional dengan gaya tampilan yang lebih bersih, modern, dan elegan, sehingga cocok untuk Anda yang menginginkan bangunan kayu dengan identitas kuat namun tetap relevan untuk kebutuhan masa kini."
   },
   "features": {
@@ -91,10 +91,10 @@
   },
   "location": {
     "badge": "Lokasi & Layanan",
-    "title": "Melayani dari Tabanan untuk Kebutuhan Bangunan Kayu Anda",
+    "title": "Melayani Seluruh Bali untuk Kebutuhan Bangunan Kayu Anda",
     "description": "Rumah Kayu SC siap menjadi partner Anda untuk mewujudkan bangunan kayu yang estetik, fungsional, dan bernilai tinggi. Konsultasikan kebutuhan model <strong>Joglo</strong>, <strong>Limasan</strong>, atau <strong>Gladak</strong> sekarang juga.",
     "locationTitle": "Lokasi",
-    "locationValue": "Tabanan, Bali",
+    "locationValue": "Bali, Indonesia",
     "whatsappTitle": "WhatsApp"
   },
   "cta": {
@@ -105,7 +105,7 @@
   },
   "footer": {
     "copyright": "© 2026 Rumah Kayu SC. Semua hak dilindungi.",
-    "tagline": "Joglo • Limasan • Gladak • Tabanan"
+    "tagline": "Joglo • Limasan • Gladak • Bali"
   },
   "showcase": {
     "badge": "Contoh Bangunan",
