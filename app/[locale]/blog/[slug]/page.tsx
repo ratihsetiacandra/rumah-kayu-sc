@@ -5,11 +5,12 @@ import remarkGfm from "remark-gfm"
 import rehypeSlug from "rehype-slug"
 import { getBlogPost, getAllBlogSlugs } from "@/lib/blog"
 import { baseUrl } from "@/lib/seo-schemas"
-import { getTranslations, isValidLocale, locales, type Locale } from "@/lib/translations"
+import { getTranslations, isValidLocale, locales, getAlternateLocale } from "@/lib/translations"
 import { mdxComponents } from "@/components/mdx-components"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { LanguageProvider } from "@/lib/language-context"
+import { BlogTranslationProvider } from "@/lib/blog-translation-context"
 import { BlogPostContent } from "./blog-post-content"
 
 export async function generateStaticParams() {
@@ -37,16 +38,20 @@ export async function generateMetadata({
 
   const postUrl = `${baseUrl}/${locale}/blog/${post.slug}`
 
+  const alternateLanguages: Record<string, string> = {}
+  if (post.translationSlug) {
+    const altLocale = getAlternateLocale(locale)
+    alternateLanguages[locale] = postUrl
+    alternateLanguages[altLocale] = `${baseUrl}/${altLocale}/blog/${post.translationSlug}`
+  }
+
   return {
     title: `${post.title} | Rumah Kayu SC`,
     description: post.description,
     authors: [{ name: post.author }],
     alternates: {
       canonical: postUrl,
-      languages: {
-        en: `${baseUrl}/en/blog`,
-        id: `${baseUrl}/id/blog`,
-      },
+      ...(post.translationSlug ? { languages: alternateLanguages } : {}),
     },
     openGraph: {
       type: "article",
@@ -56,6 +61,8 @@ export async function generateMetadata({
       title: post.title,
       description: post.description,
       publishedTime: post.date,
+      modifiedTime: post.lastModified,
+      section: post.tags[0],
       authors: [post.author],
       tags: post.tags,
       images: [
@@ -63,7 +70,7 @@ export async function generateMetadata({
           url: post.image,
           width: 1200,
           height: 630,
-          alt: post.title,
+          alt: post.imageAlt,
         },
       ],
     },
@@ -95,7 +102,9 @@ export default async function BlogPostPage({
     description: post.description,
     image: `${baseUrl}${post.image}`,
     datePublished: post.date,
-    dateModified: post.date,
+    dateModified: post.lastModified,
+    wordCount: post.wordCount,
+    articleSection: post.tags[0],
     author: {
       "@type": "Organization",
       name: post.author,
@@ -144,28 +153,30 @@ export default async function BlogPostPage({
 
   return (
     <LanguageProvider locale={locale} messages={messages}>
-      <Header />
-      <main>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify([blogPostingSchema, breadcrumbSchema]),
-          }}
-        />
-        <BlogPostContent post={post} locale={locale}>
-          <MDXRemote
-            source={post.content}
-            components={mdxComponents}
-            options={{
-              mdxOptions: {
-                remarkPlugins: [remarkGfm],
-                rehypePlugins: [rehypeSlug],
-              },
+      <BlogTranslationProvider translationSlug={post.translationSlug}>
+        <Header />
+        <main>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify([blogPostingSchema, breadcrumbSchema]),
             }}
           />
-        </BlogPostContent>
-      </main>
-      <Footer />
+          <BlogPostContent post={post} locale={locale}>
+            <MDXRemote
+              source={post.content}
+              components={mdxComponents}
+              options={{
+                mdxOptions: {
+                  remarkPlugins: [remarkGfm],
+                  rehypePlugins: [rehypeSlug],
+                },
+              }}
+            />
+          </BlogPostContent>
+        </main>
+        <Footer />
+      </BlogTranslationProvider>
     </LanguageProvider>
   )
 }

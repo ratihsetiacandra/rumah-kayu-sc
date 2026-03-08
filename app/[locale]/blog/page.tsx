@@ -119,6 +119,12 @@ export default async function BlogPage({
     <LanguageProvider locale={locale} messages={messages}>
       <Header />
       <main>
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title={locale === "id" ? "RSS Feed - Rumah Kayu SC Blog" : "RSS Feed - Rumah Kayu SC Blog"}
+          href={`/${locale}/blog/feed.xml`}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

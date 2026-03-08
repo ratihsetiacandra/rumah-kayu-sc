@@ -19,9 +19,12 @@ module.exports = {
       if (fs.existsSync(dir)) {
         const files = fs.readdirSync(dir).filter((f) => f.endsWith(".md"))
         for (const file of files) {
+          const filePath = path.join(dir, file)
+          const stat = fs.statSync(filePath)
           const slug = file.replace(/\.md$/, "")
           paths.push({
             loc: `/${locale}/blog/${slug}`,
+            lastmod: stat.mtime.toISOString(),
             changefreq: "monthly",
             priority: 0.6,
           })

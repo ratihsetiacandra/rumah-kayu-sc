@@ -2,6 +2,7 @@
 
 import { getAlternateLocale } from "@/lib/translations"
 import { useLanguage } from "@/lib/language-context"
+import { useBlogTranslation } from "@/lib/blog-translation-context"
 import { motion } from "framer-motion"
 import { usePathname, useRouter } from "next/navigation"
 import { startTransition } from "react"
@@ -10,6 +11,7 @@ export function LanguageSwitcher() {
   const { locale } = useLanguage()
   const pathname = usePathname()
   const router = useRouter()
+  const { translationSlug } = useBlogTranslation()
 
   const switchLocale = (nextLocale: "en" | "id") => {
     if (nextLocale === locale) {
@@ -18,6 +20,16 @@ export function LanguageSwitcher() {
 
     const segments = pathname.split("/")
     segments[1] = nextLocale
+
+    // If on a blog post with a known translation, swap the slug
+    const isBlogPost = segments[2] === "blog" && segments[3]
+    if (isBlogPost && translationSlug) {
+      segments[3] = translationSlug
+    } else if (isBlogPost && !translationSlug) {
+      // No translation available — fall back to blog listing
+      segments.splice(3)
+    }
+
     const nextPath = segments.join("/") || `/${nextLocale}`
     const hash = typeof window !== "undefined" ? window.location.hash : ""
 

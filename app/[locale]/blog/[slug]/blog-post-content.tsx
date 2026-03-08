@@ -83,7 +83,7 @@ export function BlogPostContent({ post, locale, children }: BlogPostContentProps
         >
           <Image
             src={post.image}
-            alt={post.title}
+            alt={post.imageAlt}
             width={760}
             height={428}
             priority
