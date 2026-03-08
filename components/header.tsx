@@ -35,6 +35,7 @@ export function Header() {
             <Link href="#features" className="hover:text-primary transition-colors">{t.header.nav.features}</Link>
             <Link href="#products" className="hover:text-primary transition-colors">{t.header.nav.products}</Link>
             <Link href="#location" className="hover:text-primary transition-colors">{t.header.nav.location}</Link>
+            <Link href={`/${locale}/blog`} className="hover:text-primary transition-colors">{t.header.nav.blog}</Link>
           </nav>
 
           <div className="flex items-center gap-2 sm:gap-3">
@@ -98,6 +99,13 @@ export function Header() {
                   className="px-4 py-3 rounded-xl hover:bg-secondary transition-colors text-foreground"
                 >
                   {t.header.nav.location}
+                </Link>
+                <Link
+                  href={`/${locale}/blog`}
+                  onClick={() => setIsMenuOpen(false)}
+                  className="px-4 py-3 rounded-xl hover:bg-secondary transition-colors text-foreground"
+                >
+                  {t.header.nav.blog}
                 </Link>
                 <Link
                   href="https://wa.me/6281997826396"

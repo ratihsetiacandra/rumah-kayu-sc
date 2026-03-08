@@ -10,7 +10,8 @@
       "about": "About",
       "features": "Features",
       "products": "Products",
-      "location": "Location"
+      "location": "Location",
+      "blog": "Blog"
     },
     "whatsapp": "WhatsApp"
   },
@@ -119,6 +120,14 @@
     "description": "Every Joglo we build has its own character. From antique Joglo with fine carved ornaments to modern Joglo with a clean aesthetic - all crafted with quality wood and experienced hands.",
     "project": "Joglo project documentation by Rumah Kayu SC",
     "cta": "Ask about Joglo"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Insights, tips, and stories about traditional wooden houses",
+    "backToBlog": "Back to Blog",
+    "readMore": "Read More",
+    "publishedOn": "Published on",
+    "noPosts": "No posts yet. Check back soon!"
   },
   "whatsappMessages": {
     "general": "Hello Rumah Kayu SC, I would like to consult about wooden houses.",

@@ -10,7 +10,8 @@
       "about": "Tentang",
       "features": "Keunggulan",
       "products": "Produk",
-      "location": "Lokasi"
+      "location": "Lokasi",
+      "blog": "Blog"
     },
     "whatsapp": "WhatsApp"
   },
@@ -119,6 +120,14 @@
     "description": "Setiap Joglo yang kami kerjakan memiliki karakter tersendiri. Dari Joglo antik berornamen ukiran halus hingga Joglo modern dengan tampilan bersih — semua dibuat dengan material kayu berkualitas dan tangan yang berpengalaman.",
     "project": "Dokumentasi proyek Joglo oleh Rumah Kayu SC",
     "cta": "Tanya tentang Joglo"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Wawasan, tips, dan cerita tentang rumah kayu tradisional",
+    "backToBlog": "Kembali ke Blog",
+    "readMore": "Baca Selengkapnya",
+    "publishedOn": "Diterbitkan pada",
+    "noPosts": "Belum ada artikel. Nantikan segera!"
   },
   "whatsappMessages": {
     "general": "Halo Rumah Kayu SC, saya ingin konsultasi tentang rumah kayu.",
