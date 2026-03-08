@@ -1,0 +1,129 @@
+{
+  "meta": {
+    "title": "Rumah Kayu SC | Spesialis Rumah Kayu Tradisional Jawa",
+    "description": "Penyedia rumah kayu tradisional Jawa berkualitas tinggi. Joglo, Limasan, Gladak dengan craftsmanship terbaik.",
+    "ogAlt": "Rumah Kayu SC - Rumah Kayu Tradisional Jawa"
+  },
+  "header": {
+    "tagline": "Joglo • Limasan • Gladak",
+    "nav": {
+      "about": "Tentang",
+      "features": "Keunggulan",
+      "products": "Produk",
+      "location": "Lokasi"
+    },
+    "whatsapp": "WhatsApp"
+  },
+  "hero": {
+    "badge": "Rumah Kayu Premium di Tabanan",
+    "title": "Bangun Hunian Kayu Elegan dengan Karakter Tradisional yang Berkelas",
+    "description": "Rumah Kayu SC menghadirkan rumah kayu <strong>Joglo</strong>, <strong>Limasan</strong>, dan <strong>Gladak</strong> dengan tampilan bersih, elegan, dan penuh kehangatan alami. Cocok untuk hunian pribadi, villa, ruang santai, hingga bangunan komersial yang ingin tampil lebih bernilai dan berkarakter.",
+    "cta": "Konsultasi via WhatsApp",
+    "viewProducts": "Lihat Produk",
+    "location": "Tabanan",
+    "design": "Desain elegan & natural",
+    "types": "Joglo, Limasan, Gladak",
+    "cardTitle": "Rumah Kayu SC",
+    "cardDescription": "Keindahan rumah kayu bukan hanya pada bentuknya, tetapi pada rasa hangat, tenang, dan berkelas yang langsung terasa sejak pandangan pertama."
+  },
+  "about": {
+    "badge": "Tentang Kami",
+    "tagline": "Keindahan rumah kayu yang dibuat dengan rasa, detail, dan karakter.",
+    "title": "Rumah Kayu yang Indah Dipandang, Nyaman Digunakan",
+    "description1": "Berlokasi di <strong>Tabanan</strong>, Rumah Kayu SC fokus menghadirkan bangunan kayu yang tidak hanya menarik secara visual, tetapi juga nyaman, bernilai estetika tinggi, dan memberi kesan eksklusif pada setiap ruang.",
+    "description2": "Kami memadukan karakter arsitektur tradisional dengan gaya tampilan yang lebih bersih, modern, dan elegan, sehingga cocok untuk Anda yang menginginkan bangunan kayu dengan identitas kuat namun tetap relevan untuk kebutuhan masa kini."
+  },
+  "features": {
+    "badge": "Keunggulan",
+    "title": "Kenapa Memilih Rumah Kayu SC?",
+    "description": "Setiap bangunan kayu memiliki jiwa, dan kami merancangnya agar tampil berkelas, terasa hangat, serta cocok dengan fungsi yang Anda butuhkan.",
+    "items": [
+      {
+        "title": "Elegan & Berkarakter",
+        "description": "Desain menonjolkan kemewahan sederhana dengan kekuatan nuansa tradisional."
+      },
+      {
+        "title": "Material Bernilai",
+        "description": "Sentuhan kayu memberi rasa hangat, alami, dan tampilan yang lebih eksklusif."
+      },
+      {
+        "title": "Finishing Rapi",
+        "description": "Tampilan bersih dan premium agar bangunan terlihat mewah dari segala sudut."
+      },
+      {
+        "title": "Fleksibel Kebutuhan",
+        "description": "Cocok untuk rumah tinggal, villa, gazebo, kafe, maupun area komersial."
+      },
+      {
+        "title": "Konsultasi Mudah",
+        "description": "Anda bisa diskusikan model, ukuran, dan konsep sesuai kebutuhan proyek."
+      }
+    ]
+  },
+  "products": {
+    "badge": "Produk Kami",
+    "title": "Pilihan Rumah Kayu dengan Pesona yang Berbeda",
+    "description": "Temukan model rumah kayu yang paling sesuai dengan karakter ruang dan impian Anda.",
+    "askButton": "Tanya",
+    "items": [
+      {
+        "tag": "Rumah Kayu Joglo",
+        "title": "Joglo",
+        "description": "Tampilan megah, anggun, dan penuh wibawa. Cocok untuk Anda yang menginginkan rumah kayu dengan detail tradisional kuat dan kesan premium yang langsung terasa."
+      },
+      {
+        "tag": "Rumah Kayu Limasan",
+        "title": "Limasan",
+        "description": "Proporsi atap yang indah, tampilan seimbang, dan nuansa elegan yang tenang. Pilihan ideal untuk hunian nyaman dengan keindahan tradisional yang tak lekang oleh waktu."
+      },
+      {
+        "tag": "Rumah Kayu Gladak",
+        "title": "Gladak",
+        "description": "Sederhana, hangat, dan penuh karakter alami. Cocok untuk ruang santai, rumah singgah, gazebo, atau konsep bangunan bernuansa natural dan estetik."
+      }
+    ]
+  },
+  "value": {
+    "badge": "Nilai Jual",
+    "title": "Bukan Sekadar Bangunan, Tapi Investasi Estetika",
+    "description": "Rumah kayu memiliki daya tarik visual yang kuat dan menghadirkan suasana yang sulit digantikan material lain. Dengan desain yang tepat, bangunan kayu menjadi ruang yang nyaman, berkelas, dan memberi kesan eksklusif bagi pemilik maupun tamu yang datang."
+  },
+  "location": {
+    "badge": "Lokasi & Layanan",
+    "title": "Melayani dari Tabanan untuk Kebutuhan Bangunan Kayu Anda",
+    "description": "Rumah Kayu SC siap menjadi partner Anda untuk mewujudkan bangunan kayu yang estetik, fungsional, dan bernilai tinggi. Konsultasikan kebutuhan model <strong>Joglo</strong>, <strong>Limasan</strong>, atau <strong>Gladak</strong> sekarang juga.",
+    "locationTitle": "Lokasi",
+    "locationValue": "Tabanan, Bali",
+    "whatsappTitle": "WhatsApp"
+  },
+  "cta": {
+    "badge": "Konsultasi Sekarang",
+    "title": "Wujudkan Rumah Kayu Impian Anda Bersama Rumah Kayu SC",
+    "description": "Diskusikan model, ukuran, dan kebutuhan bangunan Anda sekarang juga. Kami siap membantu Anda memilih konsep rumah kayu yang paling sesuai dengan karakter lahan, fungsi ruang, dan selera desain Anda.",
+    "button": "Chat WhatsApp Sekarang"
+  },
+  "footer": {
+    "copyright": "© 2026 Rumah Kayu SC. Semua hak dilindungi.",
+    "tagline": "Joglo • Limasan • Gladak • Tabanan"
+  },
+  "showcase": {
+    "badge": "Contoh Bangunan",
+    "title": "Bangunan Kayu untuk Cafe & Komersial",
+    "description": "Kayu Jawa bukan hanya untuk hunian. Lihat bagaimana kami menghadirkan suasana hangat, estetik, dan berkarakter kuat untuk ruang komersial — dari eksterior hingga detail interior.",
+    "project": "Proyek: Balyand Lifestyle & Kopi Teras Sawah, Bali",
+    "cta": "Diskusikan Proyek Anda"
+  },
+  "showcaseJoglo": {
+    "badge": "Contoh Bangunan",
+    "title": "Rumah Joglo — Hunian Kayu dengan Jiwa Tradisional",
+    "description": "Setiap Joglo yang kami kerjakan memiliki karakter tersendiri. Dari Joglo antik berornamen ukiran halus hingga Joglo modern dengan tampilan bersih — semua dibuat dengan material kayu berkualitas dan tangan yang berpengalaman.",
+    "project": "Dokumentasi proyek Joglo oleh Rumah Kayu SC",
+    "cta": "Tanya tentang Joglo"
+  },
+  "whatsappMessages": {
+    "general": "Halo Rumah Kayu SC, saya ingin konsultasi tentang rumah kayu.",
+    "joglo": "Halo Rumah Kayu SC, saya tertarik dengan rumah kayu Joglo.",
+    "limasan": "Halo Rumah Kayu SC, saya tertarik dengan rumah kayu Limasan.",
+    "gladak": "Halo Rumah Kayu SC, saya tertarik dengan rumah kayu Gladak."
+  }
+}

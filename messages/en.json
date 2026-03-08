@@ -1,0 +1,129 @@
+{
+  "meta": {
+    "title": "Rumah Kayu SC | Traditional Javanese Wooden House Specialist",
+    "description": "Premium traditional Javanese wooden house provider. Joglo, Limasan, Gladak with finest craftsmanship.",
+    "ogAlt": "Rumah Kayu SC - Traditional Javanese Wooden Houses"
+  },
+  "header": {
+    "tagline": "Joglo • Limasan • Gladak",
+    "nav": {
+      "about": "About",
+      "features": "Features",
+      "products": "Products",
+      "location": "Location"
+    },
+    "whatsapp": "WhatsApp"
+  },
+  "hero": {
+    "badge": "Premium Wooden Houses in Tabanan",
+    "title": "Build an Elegant Wooden Home with Classy Traditional Character",
+    "description": "Rumah Kayu SC presents <strong>Joglo</strong>, <strong>Limasan</strong>, and <strong>Gladak</strong> wooden houses with clean, elegant appearance and natural warmth. Perfect for private residences, villas, relaxation spaces, or commercial buildings seeking more value and character.",
+    "cta": "Consult via WhatsApp",
+    "viewProducts": "View Products",
+    "location": "Tabanan",
+    "design": "Elegant & natural design",
+    "types": "Joglo, Limasan, Gladak",
+    "cardTitle": "Rumah Kayu SC",
+    "cardDescription": "The beauty of a wooden house lies not only in its form, but in the warmth, tranquility, and class that you feel from the very first glance."
+  },
+  "about": {
+    "badge": "About Us",
+    "tagline": "The beauty of wooden houses crafted with taste, detail, and character.",
+    "title": "Wooden Houses that Look Beautiful and Feel Comfortable",
+    "description1": "Located in <strong>Tabanan</strong>, Rumah Kayu SC focuses on delivering wooden buildings that are not only visually appealing but also comfortable, highly aesthetic, and give an exclusive impression to every space.",
+    "description2": "We blend traditional architectural character with cleaner, modern, and elegant styling, making it perfect for those who want wooden buildings with strong identity yet relevant for today's needs."
+  },
+  "features": {
+    "badge": "Features",
+    "title": "Why Choose Rumah Kayu SC?",
+    "description": "Every wooden building has a soul, and we design them to look classy, feel warm, and suit the function you need.",
+    "items": [
+      {
+        "title": "Elegant & Characterful",
+        "description": "Design highlights simple luxury with the strength of traditional nuance."
+      },
+      {
+        "title": "Valuable Materials",
+        "description": "The touch of wood gives warmth, naturalness, and a more exclusive appearance."
+      },
+      {
+        "title": "Neat Finishing",
+        "description": "Clean and premium look so the building appears luxurious from every angle."
+      },
+      {
+        "title": "Flexible for Needs",
+        "description": "Suitable for homes, villas, gazebos, cafes, or commercial areas."
+      },
+      {
+        "title": "Easy Consultation",
+        "description": "You can discuss models, sizes, and concepts according to project needs."
+      }
+    ]
+  },
+  "products": {
+    "badge": "Our Products",
+    "title": "Wooden House Options with Different Charms",
+    "description": "Find the wooden house model that best matches your space character and dreams.",
+    "askButton": "Ask about",
+    "items": [
+      {
+        "tag": "Joglo Wooden House",
+        "title": "Joglo",
+        "description": "Majestic, graceful, and full of dignity. Perfect for those who want a wooden house with strong traditional details and an immediately felt premium impression."
+      },
+      {
+        "tag": "Limasan Wooden House",
+        "title": "Limasan",
+        "description": "Beautiful roof proportions, balanced appearance, and calm elegant nuance. Ideal choice for comfortable living with timeless traditional beauty."
+      },
+      {
+        "tag": "Gladak Wooden House",
+        "title": "Gladak",
+        "description": "Simple, warm, and full of natural character. Perfect for relaxation spaces, guesthouses, gazebos, or natural and aesthetic building concepts."
+      }
+    ]
+  },
+  "value": {
+    "badge": "Value Proposition",
+    "title": "Not Just a Building, But an Aesthetic Investment",
+    "description": "Wooden houses have strong visual appeal and create an atmosphere that other materials cannot replace. With the right design, wooden buildings become comfortable, classy spaces that give an exclusive impression to both owners and guests."
+  },
+  "location": {
+    "badge": "Location & Service",
+    "title": "Serving from Tabanan for Your Wooden Building Needs",
+    "description": "Rumah Kayu SC is ready to be your partner in realizing aesthetic, functional, and high-value wooden buildings. Consult your <strong>Joglo</strong>, <strong>Limasan</strong>, or <strong>Gladak</strong> model needs today.",
+    "locationTitle": "Location",
+    "locationValue": "Tabanan, Bali",
+    "whatsappTitle": "WhatsApp"
+  },
+  "cta": {
+    "badge": "Consult Now",
+    "title": "Realize Your Dream Wooden House with Rumah Kayu SC",
+    "description": "Discuss your building model, size, and needs right now. We are ready to help you choose the wooden house concept that best suits your land character, space function, and design taste.",
+    "button": "Chat WhatsApp Now"
+  },
+  "footer": {
+    "copyright": "© 2026 Rumah Kayu SC. All rights reserved.",
+    "tagline": "Joglo • Limasan • Gladak • Tabanan"
+  },
+  "showcase": {
+    "badge": "Project Showcase",
+    "title": "Wooden Buildings for Cafes & Commercial Spaces",
+    "description": "Javanese wood is not just for homes. See how we bring warmth, aesthetics, and strong character to commercial spaces - from exterior architecture to interior details.",
+    "project": "Project: Balyand Lifestyle & Kopi Teras Sawah, Bali",
+    "cta": "Discuss Your Project"
+  },
+  "showcaseJoglo": {
+    "badge": "Project Showcase",
+    "title": "Joglo House - Wooden Homes with a Traditional Soul",
+    "description": "Every Joglo we build has its own character. From antique Joglo with fine carved ornaments to modern Joglo with a clean aesthetic - all crafted with quality wood and experienced hands.",
+    "project": "Joglo project documentation by Rumah Kayu SC",
+    "cta": "Ask about Joglo"
+  },
+  "whatsappMessages": {
+    "general": "Hello Rumah Kayu SC, I would like to consult about wooden houses.",
+    "joglo": "Hello Rumah Kayu SC, I am interested in Joglo wooden house.",
+    "limasan": "Hello Rumah Kayu SC, I am interested in Limasan wooden house.",
+    "gladak": "Hello Rumah Kayu SC, I am interested in Gladak wooden house."
+  }
+}
