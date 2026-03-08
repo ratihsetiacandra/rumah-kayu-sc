@@ -30,7 +30,7 @@ export function Header() {
             </div>
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-7 text-[15px] text-foreground/90">
+          <nav aria-label="Main navigation" className="hidden lg:flex items-center gap-7 text-[15px] text-foreground/90">
             <Link href="#about" className="hover:text-primary transition-colors">{t.header.nav.about}</Link>
             <Link href="#features" className="hover:text-primary transition-colors">{t.header.nav.features}</Link>
             <Link href="#products" className="hover:text-primary transition-colors">{t.header.nav.products}</Link>
@@ -43,7 +43,7 @@ export function Header() {
             <Link
               href="https://wa.me/6281997826396"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               className="hidden sm:inline-flex items-center justify-center gap-2 px-4 md:px-6 py-2.5 md:py-3.5 rounded-full text-sm md:text-base font-semibold bg-gradient-to-br from-primary to-wood-dark text-primary-foreground shadow-lg hover:-translate-y-0.5 transition-all"
             >
               {t.header.whatsapp}
@@ -70,7 +70,7 @@ export function Header() {
             className="lg:hidden border-t border-primary/10 bg-background/95 backdrop-blur-xl"
           >
             <div className="container mx-auto px-4 py-4">
-              <nav className="flex flex-col gap-1">
+              <nav aria-label="Mobile navigation" className="flex flex-col gap-1">
                 <Link
                   href="#about"
                   onClick={() => setIsMenuOpen(false)}
@@ -102,7 +102,7 @@ export function Header() {
                 <Link
                   href="https://wa.me/6281997826396"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                   onClick={() => setIsMenuOpen(false)}
                   className="sm:hidden mt-2 flex items-center justify-center gap-2 px-4 py-3 rounded-full font-semibold bg-gradient-to-br from-primary to-wood-dark text-primary-foreground"
                 >

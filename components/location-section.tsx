@@ -61,7 +61,7 @@ export function LocationSection() {
             <Link
               href="https://wa.me/6281997826396"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               className="text-primary hover:text-wood-dark transition-colors text-sm sm:text-base"
             >
               081997826396

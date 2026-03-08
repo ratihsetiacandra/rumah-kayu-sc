@@ -56,7 +56,7 @@ export function CTASection() {
             <Link
               href={`https://wa.me/6281997826396?text=${waMessage}`}
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-5 sm:px-7 py-3 sm:py-4 rounded-full text-sm sm:text-base font-semibold bg-gradient-to-br from-primary to-wood-dark text-primary-foreground shadow-lg hover:-translate-y-0.5 transition-all"
             >
               {t.cta.button}

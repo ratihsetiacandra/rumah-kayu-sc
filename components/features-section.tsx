@@ -56,7 +56,7 @@ export function FeaturesSection() {
               className="bg-card border border-border rounded-xl sm:rounded-[20px] p-4 sm:p-5 lg:p-6 shadow-xl"
             >
               <div className="text-sm font-bold text-accent mb-2 sm:mb-3">{feature.num}</div>
-              <h4 className="text-sm sm:text-base font-semibold text-foreground mb-2">{feature.title}</h4>
+              <h3 className="text-sm sm:text-base font-semibold text-foreground mb-2">{feature.title}</h3>
               <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed">{feature.description}</p>
             </motion.div>
           ))}

@@ -92,7 +92,7 @@ export function ProductsSection() {
                   <Link
                     href={`https://wa.me/6281997826396?text=${waMessage}`}
                     target="_blank"
-                    rel="noopener"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-semibold bg-card text-foreground border border-border hover:-translate-y-0.5 hover:shadow-lg transition-all"
                   >
                     {t.products.askButton} {product.title}

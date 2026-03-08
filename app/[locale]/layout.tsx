@@ -69,7 +69,6 @@ export default async function LocaleLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="//wa.me" />
-        <link rel="dns-prefetch" href="//www.google-analytics.com" />
         <link rel="alternate" hrefLang="en" href={getLocalizedUrl("en")} />
         <link rel="alternate" hrefLang="id" href={getLocalizedUrl("id")} />
         <link rel="alternate" hrefLang="x-default" href={baseUrl} />
