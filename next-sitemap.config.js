@@ -15,11 +15,12 @@ module.exports = {
     ]
 
     for (const locale of ["en", "id"]) {
-      const dir = path.join(process.cwd(), "content", "blog", locale)
-      if (fs.existsSync(dir)) {
-        const files = fs.readdirSync(dir).filter((f) => f.endsWith(".md"))
+      // Blog posts
+      const blogDir = path.join(process.cwd(), "content", "blog", locale)
+      if (fs.existsSync(blogDir)) {
+        const files = fs.readdirSync(blogDir).filter((f) => f.endsWith(".md"))
         for (const file of files) {
-          const filePath = path.join(dir, file)
+          const filePath = path.join(blogDir, file)
           const stat = fs.statSync(filePath)
           const slug = file.replace(/\.md$/, "")
           paths.push({
@@ -27,6 +28,23 @@ module.exports = {
             lastmod: stat.mtime.toISOString(),
             changefreq: "monthly",
             priority: 0.6,
+          })
+        }
+      }
+
+      // Showcases
+      const showcaseDir = path.join(process.cwd(), "content", "showcases", locale)
+      if (fs.existsSync(showcaseDir)) {
+        const files = fs.readdirSync(showcaseDir).filter((f) => f.endsWith(".md"))
+        for (const file of files) {
+          const filePath = path.join(showcaseDir, file)
+          const stat = fs.statSync(filePath)
+          const slug = file.replace(/\.md$/, "")
+          paths.push({
+            loc: `/${locale}/showcases/${slug}`,
+            lastmod: stat.mtime.toISOString(),
+            changefreq: "monthly",
+            priority: 0.7,
           })
         }
       }

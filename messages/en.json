@@ -107,19 +107,13 @@
     "copyright": "© 2026 Rumah Kayu SC. All rights reserved.",
     "tagline": "Joglo • Limasan • Gladak • Bali"
   },
-  "showcase": {
+  "showcases": {
     "badge": "Project Showcase",
-    "title": "Wooden Buildings for Cafes & Commercial Spaces",
-    "description": "Javanese wood is not just for homes. See how we bring warmth, aesthetics, and strong character to commercial spaces - from exterior architecture to interior details.",
-    "project": "Project: Balyand Lifestyle & Kopi Teras Sawah, Bali",
-    "cta": "Discuss Your Project"
-  },
-  "showcaseJoglo": {
-    "badge": "Project Showcase",
-    "title": "Joglo House - Wooden Homes with a Traditional Soul",
-    "description": "Every Joglo we build has its own character. From antique Joglo with fine carved ornaments to modern Joglo with a clean aesthetic - all crafted with quality wood and experienced hands.",
-    "project": "Joglo project documentation by Rumah Kayu SC",
-    "cta": "Ask about Joglo"
+    "title": "Our Projects & Showcases",
+    "description": "Explore our completed wooden building projects - from traditional Joglo homes to commercial cafes and lifestyle venues across Bali.",
+    "cta": "Discuss Your Project",
+    "backToShowcases": "Back to Showcases",
+    "noShowcases": "No showcases yet. Check back soon!"
   },
   "blog": {
     "title": "Blog",

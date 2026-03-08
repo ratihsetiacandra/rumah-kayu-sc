@@ -107,19 +107,13 @@
     "copyright": "© 2026 Rumah Kayu SC. Semua hak dilindungi.",
     "tagline": "Joglo • Limasan • Gladak • Bali"
   },
-  "showcase": {
+  "showcases": {
     "badge": "Contoh Bangunan",
-    "title": "Bangunan Kayu untuk Cafe & Komersial",
-    "description": "Kayu Jawa bukan hanya untuk hunian. Lihat bagaimana kami menghadirkan suasana hangat, estetik, dan berkarakter kuat untuk ruang komersial — dari eksterior hingga detail interior.",
-    "project": "Proyek: Balyand Lifestyle & Kopi Teras Sawah, Bali",
-    "cta": "Diskusikan Proyek Anda"
-  },
-  "showcaseJoglo": {
-    "badge": "Contoh Bangunan",
-    "title": "Rumah Joglo — Hunian Kayu dengan Jiwa Tradisional",
-    "description": "Setiap Joglo yang kami kerjakan memiliki karakter tersendiri. Dari Joglo antik berornamen ukiran halus hingga Joglo modern dengan tampilan bersih — semua dibuat dengan material kayu berkualitas dan tangan yang berpengalaman.",
-    "project": "Dokumentasi proyek Joglo oleh Rumah Kayu SC",
-    "cta": "Tanya tentang Joglo"
+    "title": "Proyek & Contoh Bangunan Kami",
+    "description": "Jelajahi proyek bangunan kayu kami yang telah selesai — dari rumah Joglo tradisional hingga cafe dan venue lifestyle komersial di seluruh Bali.",
+    "cta": "Diskusikan Proyek Anda",
+    "backToShowcases": "Kembali ke Contoh Bangunan",
+    "noShowcases": "Belum ada contoh bangunan. Nantikan segera!"
   },
   "blog": {
     "title": "Blog",
