@@ -99,15 +99,14 @@ export function HeroSection() {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             className="order-1 lg:order-2 w-full bg-card rounded-2xl sm:rounded-[30px] overflow-hidden shadow-xl border border-primary/10"
           >
-            <div className="min-h-[280px] sm:min-h-[360px] lg:min-h-[560px] overflow-hidden">
+            <div className="relative min-h-[280px] sm:min-h-[360px] lg:min-h-[560px] overflow-hidden">
               <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo%20gorden%20putih-KS9IZuFdLIqLgnU8i8Yvkow2ocmVYt.jpeg"
                 alt="Teras kayu dengan lentera kertas putih dan tirai tipis — suasana rumah kayu tradisional Jawa karya Rumah Kayu SC"
-                width={1200}
-                height={1600}
+                fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                className="w-full h-full object-cover object-center"
+                className="object-cover object-center"
               />
             </div>
             <motion.div

@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
@@ -21,9 +22,13 @@ export function Header() {
       <div className="container mx-auto px-4 max-w-[1180px]">
         <nav className="flex items-center justify-between min-h-[68px] md:min-h-[78px] gap-4">
           <Link href={`/${locale}`} className="flex items-center gap-2.5 md:gap-3.5">
-            <div className="w-10 h-10 md:w-[46px] md:h-[46px] rounded-xl md:rounded-[14px] bg-gradient-to-br from-[#f3ece2] to-[#d8c2a5] grid place-items-center text-wood-dark font-serif text-lg md:text-xl font-bold shadow-[inset_0_1px_1px_rgba(255,255,255,0.5)]">
-              SC
-            </div>
+            <Image
+              src="/favicons/android-chrome-512x512.png"
+              alt="Rumah Kayu SC logo"
+              width={46}
+              height={46}
+              className="w-10 h-10 md:w-[46px] md:h-[46px] rounded-xl md:rounded-[14px]"
+            />
             <div>
               <strong className="block text-sm md:text-base text-foreground">Rumah Kayu SC</strong>
               <span className="hidden sm:block text-xs md:text-sm text-muted-foreground">{t.header.tagline}</span>
@@ -31,10 +36,10 @@ export function Header() {
           </Link>
 
           <nav aria-label="Main navigation" className="hidden lg:flex items-center gap-7 text-[15px] text-foreground/90">
-            <Link href="#about" className="hover:text-primary transition-colors">{t.header.nav.about}</Link>
-            <Link href="#features" className="hover:text-primary transition-colors">{t.header.nav.features}</Link>
-            <Link href="#products" className="hover:text-primary transition-colors">{t.header.nav.products}</Link>
-            <Link href="#location" className="hover:text-primary transition-colors">{t.header.nav.location}</Link>
+            <Link href={`/${locale}#about`} className="hover:text-primary transition-colors">{t.header.nav.about}</Link>
+            <Link href={`/${locale}#features`} className="hover:text-primary transition-colors">{t.header.nav.features}</Link>
+            <Link href={`/${locale}#products`} className="hover:text-primary transition-colors">{t.header.nav.products}</Link>
+            <Link href={`/${locale}#location`} className="hover:text-primary transition-colors">{t.header.nav.location}</Link>
             <Link href={`/${locale}/blog`} className="hover:text-primary transition-colors">{t.header.nav.blog}</Link>
           </nav>
 
@@ -73,28 +78,28 @@ export function Header() {
             <div className="container mx-auto px-4 py-4">
               <nav aria-label="Mobile navigation" className="flex flex-col gap-1">
                 <Link
-                  href="#about"
+                  href={`/${locale}#about`}
                   onClick={() => setIsMenuOpen(false)}
                   className="px-4 py-3 rounded-xl hover:bg-secondary transition-colors text-foreground"
                 >
                   {t.header.nav.about}
                 </Link>
                 <Link
-                  href="#features"
+                  href={`/${locale}#features`}
                   onClick={() => setIsMenuOpen(false)}
                   className="px-4 py-3 rounded-xl hover:bg-secondary transition-colors text-foreground"
                 >
                   {t.header.nav.features}
                 </Link>
                 <Link
-                  href="#products"
+                  href={`/${locale}#products`}
                   onClick={() => setIsMenuOpen(false)}
                   className="px-4 py-3 rounded-xl hover:bg-secondary transition-colors text-foreground"
                 >
                   {t.header.nav.products}
                 </Link>
                 <Link
-                  href="#location"
+                  href={`/${locale}#location`}
                   onClick={() => setIsMenuOpen(false)}
                   className="px-4 py-3 rounded-xl hover:bg-secondary transition-colors text-foreground"
                 >
