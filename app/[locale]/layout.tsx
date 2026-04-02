@@ -4,7 +4,6 @@ import { Cormorant_Garamond, Inter } from "next/font/google"
 import { notFound } from "next/navigation"
 import { LanguageProvider } from "@/lib/language-context"
 import {
-  baseUrl,
   getLocaleMetadata,
   getSeoSchemas,
   getLocalizedUrl,
@@ -70,9 +69,6 @@ export default async function LocaleLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="//wa.me" />
-        <link rel="alternate" hrefLang="en" href={getLocalizedUrl("en")} />
-        <link rel="alternate" hrefLang="id" href={getLocalizedUrl("id")} />
-        <link rel="alternate" hrefLang="x-default" href={baseUrl} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas) }}

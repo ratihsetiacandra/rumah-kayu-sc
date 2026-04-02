@@ -72,7 +72,7 @@ export function getLocaleMetadata(locale: Locale): Metadata {
       languages: {
         en: getLocalizedUrl("en"),
         id: getLocalizedUrl("id"),
-        "x-default": baseUrl,
+        "x-default": getLocalizedUrl("en"),
       },
     },
     openGraph: {

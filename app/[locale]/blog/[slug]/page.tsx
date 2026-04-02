@@ -38,7 +38,9 @@ export async function generateMetadata({
 
   const postUrl = `${baseUrl}/${locale}/blog/${post.slug}`
 
-  const alternateLanguages: Record<string, string> = {}
+  const alternateLanguages: Record<string, string> = {
+    "x-default": postUrl,
+  }
   if (post.translationSlug) {
     const altLocale = getAlternateLocale(locale)
     alternateLanguages[locale] = postUrl
@@ -51,7 +53,7 @@ export async function generateMetadata({
     authors: [{ name: post.author }],
     alternates: {
       canonical: postUrl,
-      ...(post.translationSlug ? { languages: alternateLanguages } : {}),
+      languages: alternateLanguages,
     },
     openGraph: {
       type: "article",

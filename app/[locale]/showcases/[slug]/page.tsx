@@ -37,7 +37,9 @@ export async function generateMetadata({
 
   const showcaseUrl = `${baseUrl}/${locale}/showcases/${showcase.slug}`
 
-  const alternateLanguages: Record<string, string> = {}
+  const alternateLanguages: Record<string, string> = {
+    "x-default": showcaseUrl,
+  }
   if (showcase.translationSlug) {
     const altLocale = getAlternateLocale(locale)
     alternateLanguages[locale] = showcaseUrl
@@ -49,7 +51,7 @@ export async function generateMetadata({
     description: showcase.description,
     alternates: {
       canonical: showcaseUrl,
-      ...(showcase.translationSlug ? { languages: alternateLanguages } : {}),
+      languages: alternateLanguages,
     },
     openGraph: {
       type: "article",
