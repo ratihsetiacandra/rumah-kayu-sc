@@ -7,6 +7,9 @@ import { motion, AnimatePresence } from "framer-motion"
 import { ArrowLeft, ChevronLeft, ChevronRight, X, Plus, Minus, HelpCircle } from "lucide-react"
 import * as Dialog from "@radix-ui/react-dialog"
 import * as Collapsible from "@radix-ui/react-collapsible"
+import { MDXRemote, type MDXRemoteSerializeResult } from "next-mdx-remote"
+import { serialize } from "next-mdx-remote/serialize"
+import remarkGfm from "remark-gfm"
 import { useLanguage } from "@/lib/language-context"
 import type { Showcase } from "@/lib/showcase"
 
@@ -16,8 +19,51 @@ interface ShowcaseDetailContentProps {
   children: React.ReactNode
 }
 
+// FAQ answer components (lightweight version for FAQ content)
+const faqComponents = {
+  p: ({ children }: { children?: React.ReactNode }) => (
+    <p className="text-muted-foreground leading-relaxed mb-3 last:mb-0">
+      {children}
+    </p>
+  ),
+  strong: ({ children }: { children?: React.ReactNode }) => (
+    <strong className="font-semibold text-foreground">{children}</strong>
+  ),
+  em: ({ children }: { children?: React.ReactNode }) => (
+    <em className="italic">{children}</em>
+  ),
+  ul: ({ children }: { children?: React.ReactNode }) => (
+    <ul className="list-disc list-outside pl-5 mb-3 space-y-1.5 text-muted-foreground">
+      {children}
+    </ul>
+  ),
+  ol: ({ children }: { children?: React.ReactNode }) => (
+    <ol className="list-decimal list-outside pl-5 mb-3 space-y-1.5 text-muted-foreground">
+      {children}
+    </ol>
+  ),
+  li: ({ children }: { children?: React.ReactNode }) => (
+    <li className="leading-relaxed">{children}</li>
+  ),
+  code: ({ children }: { children?: React.ReactNode }) => (
+    <code className="bg-secondary rounded px-1.5 py-0.5 text-sm font-mono text-foreground">
+      {children}
+    </code>
+  ),
+}
+
 function FAQItem({ question, answer, index }: { question: string; answer: string; index: number }) {
   const [isOpen, setIsOpen] = useState(false)
+  const [mdxSource, setMdxSource] = useState<MDXRemoteSerializeResult | null>(null)
+
+  useEffect(() => {
+    // Serialize the markdown answer when component mounts
+    serialize(answer, {
+      mdxOptions: {
+        remarkPlugins: [remarkGfm],
+      },
+    }).then(setMdxSource)
+  }, [answer])
 
   return (
     <Collapsible.Root open={isOpen} onOpenChange={setIsOpen} className="border-b border-wood/20 last:border-b-0">
@@ -46,8 +92,12 @@ function FAQItem({ question, answer, index }: { question: string; answer: string
           transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
           className="overflow-hidden"
         >
-          <div className="pb-5 px-1 text-muted-foreground leading-relaxed">
-            {answer}
+          <div className="pb-5 px-1">
+            {mdxSource ? (
+              <MDXRemote {...mdxSource} components={faqComponents} />
+            ) : (
+              <p className="text-muted-foreground leading-relaxed">{answer}</p>
+            )}
           </div>
         </motion.div>
       </Collapsible.Content>
