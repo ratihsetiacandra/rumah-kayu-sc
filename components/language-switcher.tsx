@@ -2,7 +2,7 @@
 
 import { getAlternateLocale } from "@/lib/translations"
 import { useLanguage } from "@/lib/language-context"
-import { useBlogTranslation } from "@/lib/blog-translation-context"
+import { useTranslationSlug } from "@/lib/blog-translation-context"
 import { motion } from "framer-motion"
 import { usePathname, useRouter } from "next/navigation"
 import { startTransition } from "react"
@@ -11,7 +11,7 @@ export function LanguageSwitcher() {
   const { locale } = useLanguage()
   const pathname = usePathname()
   const router = useRouter()
-  const { translationSlug } = useBlogTranslation()
+  const { translationSlug } = useTranslationSlug()
 
   const switchLocale = (nextLocale: "en" | "id") => {
     if (nextLocale === locale) {
@@ -27,6 +27,15 @@ export function LanguageSwitcher() {
       segments[3] = translationSlug
     } else if (isBlogPost && !translationSlug) {
       // No translation available — fall back to blog listing
+      segments.splice(3)
+    }
+
+    // If on a showcase page with a known translation, swap the slug
+    const isShowcase = segments[2] === "showcases" && segments[3]
+    if (isShowcase && translationSlug) {
+      segments[3] = translationSlug
+    } else if (isShowcase && !translationSlug) {
+      // No translation available — fall back to showcases listing
       segments.splice(3)
     }
 

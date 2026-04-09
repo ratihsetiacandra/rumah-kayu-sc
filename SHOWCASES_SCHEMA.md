@@ -32,6 +32,26 @@ ctaMessage: "WhatsApp message sent when user clicks the CTA button."
 # Optional
 translationSlug: "slug-of-other-language-version"  # Links EN <-> ID versions
 
+# SEO/GEO fields
+lastModified: "2026-04-09"              # ISO date for freshness signals
+author: "Author Name"                  # For E-E-A-T author attribution
+authorCredentials: "Brief bio/credentials"  # Establishes expertise
+featured: true                          # Highlight on homepage
+location: "Bali, Indonesia"             # Geographic context
+
+# FAQ structured data (renders as FAQPage LD+JSON)
+faq:
+  - question: "Question text?"
+    answer: "Answer text that will be rendered in structured data."
+  - question: "Another question?"
+    answer: "Another answer."
+
+# Aggregate rating (renders as AggregateRating LD+JSON)
+aggregateRating:
+  ratingValue: 4.8
+  bestRating: 5
+  reviewCount: 47
+
 # Image gallery (masonry grid on detail page)
 images:
   - src: "https://example.com/photo-1.jpeg"

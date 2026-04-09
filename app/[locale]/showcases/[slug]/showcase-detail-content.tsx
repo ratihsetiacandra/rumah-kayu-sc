@@ -4,8 +4,9 @@ import { useState, useCallback, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { motion, AnimatePresence } from "framer-motion"
-import { ArrowLeft, ChevronLeft, ChevronRight, X } from "lucide-react"
+import { ArrowLeft, ChevronLeft, ChevronRight, X, Plus, Minus, HelpCircle } from "lucide-react"
 import * as Dialog from "@radix-ui/react-dialog"
+import * as Collapsible from "@radix-ui/react-collapsible"
 import { useLanguage } from "@/lib/language-context"
 import type { Showcase } from "@/lib/showcase"
 
@@ -13,6 +14,79 @@ interface ShowcaseDetailContentProps {
   showcase: Showcase
   locale: string
   children: React.ReactNode
+}
+
+function FAQItem({ question, answer, index }: { question: string; answer: string; index: number }) {
+  const [isOpen, setIsOpen] = useState(false)
+
+  return (
+    <Collapsible.Root open={isOpen} onOpenChange={setIsOpen} className="border-b border-wood/20 last:border-b-0">
+      <Collapsible.Trigger asChild>
+        <button
+          type="button"
+          className="w-full flex items-center justify-between gap-4 py-4 px-1 text-left group focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 rounded-lg"
+        >
+          <span className="font-medium text-foreground group-hover:text-wood-dark transition-colors pr-4">
+            {question}
+          </span>
+          <span className="flex-shrink-0 w-8 h-8 rounded-full bg-secondary flex items-center justify-center group-hover:bg-wood/20 transition-colors">
+            {isOpen ? (
+              <Minus className="w-4 h-4 text-wood-dark" />
+            ) : (
+              <Plus className="w-4 h-4 text-wood-dark" />
+            )}
+          </span>
+        </button>
+      </Collapsible.Trigger>
+      <Collapsible.Content asChild>
+        <motion.div
+          initial={{ height: 0, opacity: 0 }}
+          animate={{ height: "auto", opacity: 1 }}
+          exit={{ height: 0, opacity: 0 }}
+          transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
+          className="overflow-hidden"
+        >
+          <div className="pb-5 px-1 text-muted-foreground leading-relaxed">
+            {answer}
+          </div>
+        </motion.div>
+      </Collapsible.Content>
+    </Collapsible.Root>
+  )
+}
+
+function FAQSection({ faq, locale }: { faq: { question: string; answer: string }[]; locale: string }) {
+  const title = locale === "id" ? "Pertanyaan Umum" : "Frequently Asked Questions"
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.55 }}
+      className="max-w-[760px] mx-auto mb-10"
+    >
+      <div className="bg-secondary/50 rounded-2xl p-6 sm:p-8 border border-wood/10">
+        <div className="flex items-center gap-3 mb-6">
+          <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-wood-dark flex items-center justify-center">
+            <HelpCircle className="w-5 h-5 text-primary-foreground" />
+          </div>
+          <h2 className="font-serif text-xl sm:text-2xl font-bold text-wood-dark">
+            {title}
+          </h2>
+        </div>
+        <div className="divide-y divide-wood/10">
+          {faq.map((item, index) => (
+            <FAQItem
+              key={index}
+              question={item.question}
+              answer={item.answer}
+              index={index}
+            />
+          ))}
+        </div>
+      </div>
+    </motion.div>
+  )
 }
 
 export function ShowcaseDetailContent({ showcase, locale, children }: ShowcaseDetailContentProps) {
@@ -149,11 +223,16 @@ export function ShowcaseDetailContent({ showcase, locale, children }: ShowcaseDe
           {children}
         </motion.div>
 
+        {/* FAQ Section */}
+        {showcase.faq && showcase.faq.length > 0 && (
+          <FAQSection faq={showcase.faq} locale={locale} />
+        )}
+
         {/* CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
+          transition={{ duration: 0.5, delay: showcase.faq ? 0.65 : 0.6 }}
           className="flex justify-center"
         >
           <Link

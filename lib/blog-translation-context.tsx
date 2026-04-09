@@ -2,12 +2,32 @@
 
 import { createContext, useContext, type ReactNode } from "react"
 
-interface BlogTranslation {
+interface TranslationContextType {
   translationSlug?: string
 }
 
-const BlogTranslationContext = createContext<BlogTranslation>({})
+const TranslationContext = createContext<TranslationContextType>({})
 
+export function TranslationProvider({
+  translationSlug,
+  children,
+}: {
+  translationSlug?: string
+  children: ReactNode
+}) {
+  return (
+    <TranslationContext.Provider value={{ translationSlug }}>
+      {children}
+    </TranslationContext.Provider>
+  )
+}
+
+export function useTranslationSlug() {
+  return useContext(TranslationContext)
+}
+
+// Legacy exports for backward compatibility
+export const BlogTranslationContext = TranslationContext
 export function BlogTranslationProvider({
   translationSlug,
   children,
@@ -16,12 +36,12 @@ export function BlogTranslationProvider({
   children: ReactNode
 }) {
   return (
-    <BlogTranslationContext.Provider value={{ translationSlug }}>
+    <TranslationContext.Provider value={{ translationSlug }}>
       {children}
-    </BlogTranslationContext.Provider>
+    </TranslationContext.Provider>
   )
 }
 
 export function useBlogTranslation() {
-  return useContext(BlogTranslationContext)
+  return useContext(TranslationContext)
 }

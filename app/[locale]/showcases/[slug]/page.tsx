@@ -10,6 +10,7 @@ import { mdxComponents } from "@/components/mdx-components"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { LanguageProvider } from "@/lib/language-context"
+import { TranslationProvider } from "@/lib/blog-translation-context"
 import { ShowcaseDetailContent } from "./showcase-detail-content"
 
 export async function generateStaticParams() {
@@ -116,30 +117,73 @@ export default async function ShowcaseDetailPage({
     ],
   }
 
+  // Build FAQPage schema if FAQ exists
+  const schemas: unknown[] = [breadcrumbSchema]
+
+  if (showcase.faq && showcase.faq.length > 0) {
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: showcase.faq.map((item) => ({
+        "@type": "Question",
+        name: item.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: item.answer,
+        },
+      })),
+    }
+    schemas.push(faqSchema)
+  }
+
+  // Add AggregateRating schema if rating exists
+  if (showcase.aggregateRating) {
+    const ratingSchema = {
+      "@context": "https://schema.org",
+      "@type": "AggregateRating",
+      ratingValue: showcase.aggregateRating.ratingValue,
+      bestRating: showcase.aggregateRating.bestRating,
+      reviewCount: showcase.aggregateRating.reviewCount,
+      itemReviewed: {
+        "@type": "Service",
+        name: showcase.title,
+        description: showcase.description,
+        provider: {
+          "@type": "Organization",
+          name: "Rumah Kayu SC",
+          url: baseUrl,
+        },
+      },
+    }
+    schemas.push(ratingSchema)
+  }
+
   return (
     <LanguageProvider locale={locale} messages={messages}>
-      <Header />
-      <main>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify([breadcrumbSchema]),
-          }}
-        />
-        <ShowcaseDetailContent showcase={showcase} locale={locale}>
-          <MDXRemote
-            source={showcase.content}
-            components={mdxComponents}
-            options={{
-              mdxOptions: {
-                remarkPlugins: [remarkGfm],
-                rehypePlugins: [rehypeSlug],
-              },
+      <TranslationProvider translationSlug={showcase.translationSlug}>
+        <Header />
+        <main>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(schemas),
             }}
           />
-        </ShowcaseDetailContent>
-      </main>
-      <Footer />
+          <ShowcaseDetailContent showcase={showcase} locale={locale}>
+            <MDXRemote
+              source={showcase.content}
+              components={mdxComponents}
+              options={{
+                mdxOptions: {
+                  remarkPlugins: [remarkGfm],
+                  rehypePlugins: [rehypeSlug],
+                },
+              }}
+            />
+          </ShowcaseDetailContent>
+        </main>
+        <Footer />
+      </TranslationProvider>
     </LanguageProvider>
   )
 }

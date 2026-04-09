@@ -9,6 +9,11 @@ export interface ShowcaseImage {
   span: string
 }
 
+export interface FAQItem {
+  question: string
+  answer: string
+}
+
 export interface ShowcaseMeta {
   title: string
   slug: string
@@ -21,6 +26,19 @@ export interface ShowcaseMeta {
   ctaMessage: string
   translationSlug?: string
   images: ShowcaseImage[]
+  // GEO/SEO fields
+  lastModified?: string
+  author?: string
+  authorCredentials?: string
+  featured?: boolean
+  location?: string
+  // FAQ and rating for structured data
+  faq?: FAQItem[]
+  aggregateRating?: {
+    ratingValue: number
+    bestRating: number
+    reviewCount: number
+  }
 }
 
 export interface Showcase extends ShowcaseMeta {
@@ -43,6 +61,13 @@ function parseMeta(data: Record<string, unknown>, filename: string): ShowcaseMet
     ctaMessage: (data.ctaMessage as string) ?? "",
     translationSlug: data.translationSlug as string | undefined,
     images: (data.images as ShowcaseImage[]) ?? [],
+    lastModified: data.lastModified as string | undefined,
+    author: data.author as string | undefined,
+    authorCredentials: data.authorCredentials as string | undefined,
+    featured: data.featured as boolean | undefined,
+    location: data.location as string | undefined,
+    faq: (data.faq as FAQItem[]) ?? undefined,
+    aggregateRating: data.aggregateRating as ShowcaseMeta["aggregateRating"] | undefined,
   }
 }
 

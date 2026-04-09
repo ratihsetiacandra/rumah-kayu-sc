@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "skills": {
+    "seo-content": {
+      "source": "agricidaniel/claude-seo",
+      "sourceType": "github",
+      "computedHash": "b752447b91a7bbc2246ec6895ee356ea3abc793f778c0951f414cc7897165aea"
+    },
+    "seo-geo": {
+      "source": "agricidaniel/claude-seo",
+      "sourceType": "github",
+      "computedHash": "5ab22abe824ddde31c293c5b4b834c29e106a537e0cc6e40194160316ddb5721"
+    }
+  }
+}
